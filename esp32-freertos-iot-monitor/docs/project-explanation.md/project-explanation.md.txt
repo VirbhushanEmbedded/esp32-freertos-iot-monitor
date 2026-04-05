@@ -1,0 +1,16 @@
+This project is built using ESP32 and demonstrates multitasking using FreeRTOS. The system reads environmental data and displays it in real-time while also handling user input.
+
+Three tasks are created:
+
+Sensor Task
+Reads temperature and humidity from the DHT22 sensor every 2 seconds and sends the data to a queue.
+
+Button Task
+Monitors button input with software debouncing and sends press count to another queue.
+
+Display Task
+Receives data from queues and updates the OLED display continuously.
+
+Queues are used to ensure safe communication between tasks without data corruption.
+
+This project helps understand real-time systems, task scheduling, and inter-task communication in embedded systems.
